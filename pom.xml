@@ -83,27 +83,57 @@
                         <arg>-package-name</arg>
                         <arg>-token=http://schemas.xmlsoap.org/soap/envelope/</arg>
                         <arg>-name=io.github.rawvoid.soap.model.v1_1</arg>
+
+                        <arg>-package-name</arg>
+                        <arg>-token=http://www.w3.org/2003/05/soap-envelope</arg>
+                        <arg>-name=io.github.rawvoid.soap.model.v1_2</arg>
+
                         <arg>-property-name</arg>
                         <arg>-token=faultcode</arg>
                         <arg>-name=faultCode</arg>
+
                         <arg>-property-name</arg>
                         <arg>-token=faultstring</arg>
                         <arg>-name=faultString</arg>
+
                         <arg>-property-name</arg>
                         <arg>-token=faultactor</arg>
                         <arg>-name=faultActor</arg>
 
+                        <arg>-class-name</arg>
+                        <arg>-regex=(.*)Type$</arg>
+                        <arg>-name=$1</arg>
+
+                        <arg>-class-name</arg>
+                        <arg>-token=Faultcode</arg>
+                        <arg>-name=FaultCode</arg>
+
+                        <arg>-class-name</arg>
+                        <arg>-token=Faultreason</arg>
+                        <arg>-name=FaultReason</arg>
+
+                        <arg>-class-name</arg>
+                        <arg>-token=Reasontext</arg>
+                        <arg>-name=ReasonText</arg>
+
                         <arg>-Xns-prefix</arg>
                         <arg>-config</arg>
+                        <arg>-package=io.github.rawvoid.soap.model.v1_1</arg>
                         <arg>-xmlns</arg>
                         <arg>-ns=http://schemas.xmlsoap.org/soap/envelope/</arg>
                         <arg>-prefix=SOAP-ENV</arg>
+
+                        <arg>-config</arg>
+                        <arg>-package=io.github.rawvoid.soap.model.v1_2</arg>
+                        <arg>-xmlns</arg>
+                        <arg>-ns=http://www.w3.org/2003/05/soap-envelope</arg>
+                        <arg>-prefix=env</arg>
                     </args>
                     <plugins>
                         <plugin>
                             <groupId>io.github.rawvoid</groupId>
                             <artifactId>jaxb-plugins</artifactId>
-                            <version>1.1.0</version>
+                            <version>1.2.0</version>
                         </plugin>
                     </plugins>
                 </configuration>
