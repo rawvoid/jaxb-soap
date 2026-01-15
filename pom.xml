@@ -8,6 +8,7 @@
     <packaging>pom</packaging>
 
     <name>Soap JAXB Model Parent</name>
+    <description>Parent POM for Soap JAXB Model</description>
     <url>https://github.com/rawvoid/soap-jaxb-model</url>
     <modules>
         <module>soap-v1_1</module>
