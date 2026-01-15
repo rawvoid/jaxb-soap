@@ -11,6 +11,8 @@
     <packaging>jar</packaging>
 
     <name>Soap JAXB Model V1.2</name>
+    <description>Soap JAXB Model V1.2</description>
+    <url>https://github.com/rawvoid/soap-jaxb-model</url>
 
     <build>
         <plugins>
